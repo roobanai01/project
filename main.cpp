@@ -1,4 +1,6 @@
+
 #include <iostream>
+#include<cstring>
 using namespace std;
 
 class roar
@@ -90,7 +92,6 @@ class rooban{
 public:
     float a,b,c;
     int addition(int a, int b);
-    int namerepeted(int a, int i,char name);
     void addition()
     {
       cout<<"\n---Addition Program---";
@@ -108,14 +109,75 @@ int rooban::addition(int a, int b)
         c=a+b;
         cout<<"\nThe Added Value of " <<a <<" + " <<b<< " is:"<<c<<"\n";
     }
-int rooban::namerepeted(int a, int i,char name)
-{
+class kumar{
+public:
 
-    for(i=0;i<=a;i++)
+void condition()
+{int a;
+int i;
+cout<<"Enter the value:";
+cin>>a;
+switch(a)
+{
+case 1:
+    for(i=0;i<=10;i++)
     {
-        cout<<name<<"\n";
+        cout<<"Rooban is a good boy.\n";
     }
+        break;
+
+ case 2:
+    for(i=0;i<=10;i++)
+    {
+
+        cout<<"Vinu is a good boy.\n";
+    }
+        break;
+
+case 3:
+    for(i=0;i<=10;i++)
+    {
+
+        cout<<"Kalai is a good boy.\n";
+    }
+        break;
 }
+}
+void condition1()
+{
+    int l=0;
+    char a[500];
+    cout<<"Enter the string:";
+    cin.getline(a,500);
+    l=strlen(a);
+    cout<<"The length of the string("<<a<<") is:"<<l;
+}
+void condition2()
+{
+    int b;
+    int c;
+    char a[500];
+    cout<<"Enter the value:";
+    cin>>b;
+    cout<<"select Square or Cube:";
+    cin>>a;
+    if(strcmp(a,"square")==0)
+    {
+c=b*b;
+cout<<"The Square value of the "<<b<<"is:"<<c;
+    }
+    else if(strcmp(a,"cube")==0)
+    {
+c=b*b*b;
+cout<<"The Cube value of the "<<b<<"is:"<<c;
+    }
+else
+{
+    cout<<"You entered the wrong option";
+}
+}
+};
+
 
 int main()
 {
@@ -126,12 +188,15 @@ int main()
 //rk.division();
 //rk.increment();
 //rk.decrement();
-//rk.namerepeted();
+
 rooban rn;
 //rn.addition();
 //rn.addition(45,15);
-//rn.namerepeted(10,0,'v');
-rn.agefinder();
+
+kumar kr;
+//kr.condition();
+//kr.condition1();
+kr.condition2();
     return 0;
 }
 
