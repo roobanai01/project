@@ -176,6 +176,15 @@ else
     cout<<"You entered the wrong option";
 }
 }
+void increment()
+{
+    int a;
+        cout<<"\n---Increment Program---";
+        cout<< "\nEnter the Value is to be increment:";
+        cin>>a;
+        a++;
+        cout<<"\nThe Incremented Value is:"<<a<<"\n";
+}
 };
 
 
@@ -196,7 +205,8 @@ rooban rn;
 kumar kr;
 //kr.condition();
 //kr.condition1();
-kr.condition2();
+//kr.condition2();
+kr.increment();
     return 0;
 }
 
