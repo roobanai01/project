@@ -179,11 +179,50 @@ else
 void increment()
 {
     int a;
+    int b;
         cout<<"\n---Increment Program---";
         cout<< "\nEnter the Value is to be increment:";
         cin>>a;
-        a++;
-        cout<<"\nThe Incremented Value is:"<<a<<"\n";
+        b=++a;
+        cout<<"\nThe Incremented Value of " <<a<< "is:"<<b<<"\n";
+}
+void tables()
+{
+    int a,b,c;
+cout<<"Enter how many tables you want:";
+cin>>a;
+cout<<"Multiplication table upto "<<a<<endl;
+for(b=1;b<=a;b++)
+{
+for(c=1;c<=10;c++)
+cout<<c<<"*"<<b<<"="<<b*c<<endl;
+cout<<"____________________"<<endl;
+}
+}
+
+void poin()
+{
+    int a=10;
+    string b;
+    cout<<"Enter the string:";
+    cin.getline(b);
+    int *p=&a;
+    string *q=&b;
+    cout<<"The Value of A is:"<<a<<endl;
+    cout<<"The Address of the A is:"<<p<<endl;
+    cout<<"The Value present in the "<<p<<" is:"<<*p<<endl;
+    cout<<"The Value of B is:"<<b<<endl;
+    cout<<"The Address of the B is:"<<q<<endl;
+    cout<<"The Value present in the "<<q<<" is:"<<*q<<endl;
+
+}
+void hunter()
+{
+    string a;
+    string b;
+    cout<<"Enter the name for A:";
+    cin>>a;
+
 }
 };
 
@@ -206,7 +245,9 @@ kumar kr;
 //kr.condition();
 //kr.condition1();
 //kr.condition2();
-kr.increment();
+//kr.increment();
+//kr.tables();
+kr.poin();
     return 0;
 }
 

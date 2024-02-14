@@ -17,7 +17,7 @@ if n==1:
 if n>1:
     for i in range(2,n):
         if(n%i)==0:
-            flag=True          
+            flag=True            
             print(n," is not a prime number.")
             break
         else:
