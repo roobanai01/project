@@ -70,6 +70,9 @@ def personaldetails():
         labeloutput4.config(text=d)
         labeloutput5.config(text=e)
         labeloutput5.config(text=f)
+
+    def close():
+        win.destroy()
     def optionselected(event):
         selectoption = combo.get()
 
@@ -133,7 +136,7 @@ def personaldetails():
     btnclr=Button(win,text="Clear",font=("Batang",14),fg="White",bg="Blue", command=Clear)
     btnclr.grid(row=7,column=2)
 
-    btnclo=Button(win,text="Close",font=("Batang",14),fg="White",bg="Red")
+    btnclo=Button(win,text="Close",font=("Batang",14),fg="White",bg="Red", command=close)
     btnclo.grid(row=7,column=3)
     win.mainloop()
 
