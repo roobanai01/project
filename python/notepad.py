@@ -5,6 +5,7 @@ roar=Tk()
 roar.title("Notepad")
 roar.geometry("500x500")
 roar.state("zoomed")
+roar.wm_iconbitmap('img/login.ico')
 
 def close():
     roar.destroy()
@@ -66,4 +67,8 @@ helpimenu.add_separator()
 helpimenu.add_command(label="About Notepad")
 
 roar.config(menu=menubar)
+
+editor=Text(roar,width=roar.winfo_screenwidth(), height=roar.winfo_screenheight())
+editor.pack(padx=10,pady=10,expand=True)
+
 roar.mainloop()

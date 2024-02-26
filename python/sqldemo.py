@@ -10,26 +10,28 @@ con=mysql.connector.connect(
     database="ai_rooban"
 )
 
-mycursor = con.cursor()
-
-sql = "INSERT INTO bright_academy (sno,name,sports,products,quantity) VALUES (%s,%s,%s,%s,%s)"
-val = ['7','Vinu','Baseball','Baseball','6']
-mycursor.execute(sql,val)
-
-con.commit()
-
-print(mycursor.rowcount, "record inserted.")
-'''print(con)
-result=con.cursor()
-
-sql = "INSERT INTO bright_academy (sno,name,sports,products,quantity) VALUES (%d,%s,%s,%s,%d)"
-val = (1,"Rooban","Cricket","Bat",20)
-result.execute(sql, val)
+rooban = con.cursor()
+#for insert option
+'''sql = "INSERT INTO bright_academy (sno,name,sports,products,quantity) VALUES (%s,%s,%s,%s,%s)"
+val = ['6','Vinu','Baseball','Baseball','10']
+rooban.execute(sql,val)
 
 con.commit()
 
-print(result.rowcount, "record inserted.")'''
+print(rooban.rowcount, "record inserted.")'''
+#for delete option
+'''sql = "DELETE FROM bright_academy WHERE sno = %s"
+val = ['6']
+rooban.execute(sql,val)
 
-'''sql=Tk()
-sql.title("www.Managementportal.com")
-sql.geometry("500x500")'''
+con.commit()
+
+print(rooban.rowcount, "value deleted.")'''
+# for update option
+'''sql = "UPDATE bright_academy SET name= %s, sports=%s, products=%s WHERE sno = %s"
+val = ['Ragul', 'Throw ball', 'Throwball','5']
+rooban.execute(sql,val)
+
+con.commit()
+
+print(rooban.rowcount, "record updated.")'''

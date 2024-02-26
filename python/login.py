@@ -1,8 +1,26 @@
 from tkinter import *
+import os
 win=Tk()
 win.title("www.personaldetails.com")
 win.geometry("500x500+500+500")
 win.state("zoomed")
+
+def createTitle():
+    titleImageFrame=Frame(win,width=600,height=400, bg="white")
+    titleImageFrame.pack()
+
+    imgdir=os.path.join(os.path.dirname(__file__),'img')
+    print("Path name is : " + imgdir)
+
+    imageloction=os.path.join(imgdir,'welcome.gif')
+    print("image location is : " + imageloction)
+
+    titleimage=PhotoImage("titleimg",file=os.path.join(imgdir,"welcome.gif"))
+
+
+    lblTitleImage=Label(titleImageFrame, image=titleimage)
+    lblTitleImage.pack()
+
 
 def login():
     a=tbEntrya.get()

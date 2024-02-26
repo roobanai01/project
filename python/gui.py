@@ -1,11 +1,13 @@
+import os
 from tkinter import *
 from tkinter import ttk
 hai=Tk()
 hai.title("www.onlineportal.com")
 hai.geometry("400x400")
 hai.state("zoomed")
-
+hai.wm_iconbitmap('login.ico')
 def login():
+
     a=tbEntrya.get()
     b=tbEntryb.get()
     if(a=="rooban") & (b=="1234"):
