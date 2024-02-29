@@ -81,12 +81,14 @@ def personaldetails():
         c=combo.get()
         d=tbEntryd.get()
         e=tbEntrye.get()
+        f="1 Data Inserted Successfully..."
         labeloutput5.config(text=f)
         labeloutput1.config(text=a)
         labeloutput2.config(text=b)
         labeloutput3.config(text=c)
         labeloutput4.config(text=d)
         labeloutput5.config(text=e)
+        labeloutput6.config(text=f)
         sql = "INSERT INTO bright_academy (sno,name,sports,products,quantity) VALUES (%s,%s,%s,%s,%s)"
         val = [a,b,c,d,e]
         rooban.execute(sql,val)
@@ -95,6 +97,7 @@ def personaldetails():
         
     def delete():
         a=tbEntrya.get()
+        f="1 Data Deleted Successfully..."
         labeloutput6.config(text=f)
         sql = "DELETE FROM bright_academy WHERE sno = %s"
         val = [a]
@@ -108,6 +111,8 @@ def personaldetails():
         c=combo.get()
         d=tbEntryd.get()
         e=tbEntrye.get()
+        f="1 Data Updated Successfully..."
+        labeloutput6.config(text=f)
         sql = "UPDATE bright_academy SET name= %s, sports=%s, products=%s, quantity=%s WHERE sno = %s"
         val = [b,c,d,e,a]
         rooban.execute(sql,val)
